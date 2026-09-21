@@ -1,0 +1,22 @@
+{
+  "name": "00_todolist_api",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.2",
+    "prettier": "3.9.8"
+  },
+  "scripts": {
+    "dev": "bun src/app.ts",
+    "format": "bun prettier . --write"
+  },
+  "peerDependencies": {
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
