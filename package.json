@@ -7,7 +7,9 @@
     "@types/bun": "latest",
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.2",
-    "prettier": "3.9.8"
+    "@types/pg": "^8.23.1",
+    "prettier": "3.9.8",
+    "prisma": "^7.10.0"
   },
   "scripts": {
     "dev": "bun src/app.ts",
@@ -17,6 +19,10 @@
     "typescript": "^7.0.2"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "7",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
   }
 }
