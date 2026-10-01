@@ -1,5 +1,5 @@
 import express, { type Express, type Request, type Response } from "express";
-import cors from "cors"; 
+import cors from "cors";
 import { toNodeHandler } from "better-auth/node";
 import { auth } from "./lib/auth";
 import { config } from "dotenv";
@@ -10,10 +10,10 @@ const app: Express = express();
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL, 
-    methods: ["GET", "POST", "PUT", "DELETE"], 
-    credentials: true, 
-  })
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
 );
 
 app.all("/api/auth/*splat", toNodeHandler(auth));
