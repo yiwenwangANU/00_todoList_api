@@ -5,6 +5,7 @@ import { auth } from "./lib/auth";
 import { config } from "dotenv";
 import { connectDB } from "./lib/prisma";
 import { connectRedis } from "./lib/redis";
+import todoRoute from "./routes/todoRoutes";
 
 config();
 connectDB();
@@ -23,9 +24,7 @@ app.use(
 app.all("/api/auth/*splat", toNodeHandler(auth));
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
-});
+app.use("api/todo", todoRoute);
 
 app.listen(process.env.PORT, () =>
   console.log("Server hosting on post: ", process.env.PORT),

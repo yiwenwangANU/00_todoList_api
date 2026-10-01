@@ -11,7 +11,7 @@ const authMiddleware = async (
     headers: fromNodeHeaders(req.headers),
   });
   if (!session) {
-    return res.status(401).json({ error: "Unauthorized." });
+    return res.status(401).json({ message: "Unauthorized." });
   }
   req.user = session.user;
   next();
