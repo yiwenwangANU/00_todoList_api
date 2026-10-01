@@ -8,7 +8,7 @@ const redis = new RedisClient(url);
 const connectRedis = async () => {
   try {
     await redis.connect();
-    console.log('Redis connected.')
+    console.log("Redis connected.");
   } catch (e) {
     console.error(e);
     redis.close();

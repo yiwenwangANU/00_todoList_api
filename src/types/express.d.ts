@@ -4,7 +4,7 @@ type SessionUser = typeof auth.$Infer.Session.user;
 
 declare global {
   namespace Express {
-    interface Response {
+    interface Request {
       user?: SessionUser;
     }
   }
