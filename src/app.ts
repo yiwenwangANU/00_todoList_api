@@ -3,8 +3,12 @@ import cors from "cors";
 import { toNodeHandler } from "better-auth/node";
 import { auth } from "./lib/auth";
 import { config } from "dotenv";
+import { connectDB } from "./lib/prisma";
+import { connectRedis } from "./lib/redis";
 
 config();
+connectDB();
+connectRedis();
 
 const app: Express = express();
 
